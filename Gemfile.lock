@@ -225,6 +225,7 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
+  popper_js (~> 1.12.9)
   rails (~> 5.1.5)
   rename
   sass-rails (~> 5.0)
