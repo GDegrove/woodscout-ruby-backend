@@ -56,6 +56,7 @@ gem 'capistrano-passenger', '~> 0.2.0'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.12.9'
+gem 'devise'
 
 # Add this if you're using rbenv
 gem 'capistrano-rbenv', '~> 2.1'

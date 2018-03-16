@@ -1,4 +1,4 @@
-class DashboardController < ApplicationController
+class DashboardController < AuthenticatedController
     def index 
         @message = "Hello, World"
     end
