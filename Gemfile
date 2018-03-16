@@ -57,7 +57,7 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.12.9'
 gem 'devise'
-
+gem "rolify"
 # Add this if you're using rbenv
 gem 'capistrano-rbenv', '~> 2.1'
 
