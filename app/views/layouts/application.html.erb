@@ -9,10 +9,23 @@
   </head>
 
   <body>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    <div>
-    <%= yield %>  
-  </div>
+      <nav class='navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0'>
+          <%= link_to(Rails.configuration.application_name, root_path ,class: 'navbar-brand col-sm-3 col-md-2 mr-0') %>
+        
+          <ul class='navbar-nav px-3'>
+            <li class='nav-item text-nowrap'>
+                <%=link_to('Sign out', destroy_user_session_path, method: :delete,class: 'nav-link') if current_user%>
+            </li>
+          </ul>
+        </nav>
+    <div class="container-fluid">
+        <div class="row">
+          <%= navbar %>
+              <!-- Main jumbotron for a primary marketing message or call to action -->
+          <main role="main" class="col-md-9  ml-sm-auto col-lg-10 pt-3 px-4">
+            <%= yield %> 
+          </main>
+      </div>
+    </div>
   </body>
 </html>

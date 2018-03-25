@@ -10,10 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180316150131) do
+ActiveRecord::Schema.define(version: 20180325104914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.date "start_date"
+    t.date "end_date"
+    t.date "max_subscription_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "options", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_options_on_name"
+  end
+
+  create_table "participations", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "participations_options", id: false, force: :cascade do |t|
+    t.bigint "participation_id"
+    t.bigint "option_id"
+    t.index ["option_id"], name: "index_participations_options_on_option_id"
+    t.index ["participation_id", "option_id"], name: "index_participations_options_on_participation_id_and_option_id"
+    t.index ["participation_id"], name: "index_participations_options_on_participation_id"
+  end
 
   create_table "roles", force: :cascade do |t|
     t.string "name"
