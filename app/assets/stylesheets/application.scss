@@ -1,2 +1,28 @@
+ @import "colors.scss";
  @import "bootstrap";
  @import "dashboard";
+
+ body.log{
+  background-color: $gray-300;
+ }
+
+ body.log .login .title h1{
+  color: $woodscout-blue;
+ }
+
+ .login .title img{
+  width: 200px;
+ }
+
+ .login .login-main, .login .login-links{
+  background-color: #FFFFFF;
+ }
+
+ .login .login-main .actions input{
+  width: 100%;
+  font-weight: bold;
+ }
+
+ .login .login-main .actions input:hover {
+  background-color: $woodscout-blue-darker;
+ }
