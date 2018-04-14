@@ -5,6 +5,4 @@ class ApplicationController < ActionController::Base
   def authenticate_admin!
     current_user.has_role? :admin
   end
-
-
 end

@@ -58,6 +58,7 @@ gem 'jquery-rails'
 gem 'popper_js', '~> 1.12.9'
 gem 'devise'
 gem "rolify"
+gem 'loofah', '~> 2.2.1'
 # Add this if you're using rbenv
 gem 'capistrano-rbenv', '~> 2.1'
 
