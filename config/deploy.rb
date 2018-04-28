@@ -2,7 +2,7 @@
 lock "~> 3.10.1"
 
 set :application, "woodscout"
-set :repo_url, "git@github.com:GDegrove/woodscout-ruby-backend.git"
+set :repo_url, "git@bitbucket.org:GDegrove/woodscout-ruby-backend.git"
 
 set :deploy_to, "/var/www/woodscout"
 
